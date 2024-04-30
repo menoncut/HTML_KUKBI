@@ -3,14 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Document</title>    
+    <style>        
+        #form {
+            text-align: center;  
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #h1 {
+            text-align: center;  
+            justify-content: center;
+            align-items: center;
+            margin-top: 300px;
+            display: flex;            
+        }
+        #la1 {
+            line-height: 50px;
+        }
+        #la2 {
+            line-height: 50px;
+        }
+        #la3 {
+            line-height: 50px;
+        }
+    </style>
 </head>
 <body>
-    <h1>예약 정보</h1>
-    <form>        
-            <label>이&nbsp;&nbsp;름 &nbsp;<input type="text" id="user_name" placeholder="이름을 입력하세요"></label><br>
-            <label>휴대폰 <input type="text" id="user_phone" placeholder="010-0000-0000"></label><br>
-            <label>이메일 <input type="text" id="user_email" placeholder="이메일을 입력하세요"></label><br>  
+    <h1 id="h1">꿈꾸는 숲 펜션 예약 정보</h1>
+    <form id="form">        
+            <label id="la1">이&nbsp;&nbsp;름 &nbsp;<input type="text" id="user_name" placeholder="이름을 입력하세요"></label><br>
+            <label id="la2">휴대폰 <input type="text" id="user_phone" placeholder="010-0000-0000"></label><br>
+            <label id="la3">이메일 <input type="text" id="user_email" placeholder="이메일을 입력하세요"></label><br>  
             <input type="button" value="예약하기">
             <input type="button" value="취소하기">
             <input type="button" value="화면출력" onclick="out()">

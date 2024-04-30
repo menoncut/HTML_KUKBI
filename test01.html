@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+        #container {
+            width: 100%;
+            height: 100vh;
+            background-color: aquamarine;
+                        
+        }
+        #header {
+            width: 100%;
+            height: 15vh;
+            background-color: black;
+            color: #fff;
+            text-align: center;
+            line-height: 15vh;
+            flex-flow: column wrap;
+        }
+        #main {
+            width: 100%;
+            height: 75vh;
+            background-color: cornflowerblue;
+         
+        }
+        section {        
+            overflow: hidden;    
+            width: 100%;
+            height: auto;
+            background-color: blue;
+            display: flex;
+            
+        }
+        section article {
+
+        }
+        #sec1 > article {
+            width: 33.33vw;
+            height: 37.5vh;
+            background-color: cyan;
+        }
+        #sec2 > #ar1 {
+            width: 30vw;
+            height: 37.5vh;
+            background-color: rgb(227, 141, 11);            
+        }
+        #sec2 > #ar2 {
+            width: 70vw;
+            height: 37.5vh;
+            background-color: rgb(224, 1, 27);            
+        }
+        #sec1 > #ar3 {
+            width: 33.3vw;
+            height: 37.5vh;
+            background-color: rgb(25, 10, 245);            
+        }
+        #sec1 > #ar4 {
+            width: 33.3vw;
+            height: 37.5vh;
+            background-color: rgb(5, 184, 244);            
+        }
+        #sec1 > #ar5{
+            width: 33.3vw;
+            height: 37.5vh;
+            background-color: rgb(224, 11, 244);            
+        }
+        footer {
+            width: 100%;
+            height: 10vh;            
+            background-color: #ccc;
+            text-align: center;
+            line-height: 10vh;
+        }
+        @media screen and (min-width: 768px) and (max-width: 1024px) {
+            section  { 
+                flex-flow: row wrap;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+        <header id="header">
+            사이트 제목
+        </header>
+
+        <main id="main">
+            <section id="sec1">
+                <article id="ar3">asdf</article>
+                <article id="ar4">asdf</article>
+                <article id="ar5">adsf</article>
+            </section>
+            <section id="sec2">
+                <article id="ar1">adsf</article>
+                <article id="ar2">adsf</article>                
+            </section>
+        </main>
+
+        <footer>
+            푸터
+        </footer>
+
+    </div>
+</body>
+</html>

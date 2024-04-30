@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        body {
+            background-color: #000;
+        }
+        #container {
+            width: 500px;
+            margin: 20px auto;            
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            
+            margin: 50px;
+        }
+        #box1 {
+            background-color: blue;
+            border: 1px solid black;
+            animation-name: shape;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        #box2 {
+            background-color: rgb(153, 232, 8);
+            border: 1px solid black;
+            animation-name: rotate;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+        #box3 {
+            width: 100px;
+            height: 100px;
+            margin: 60px auto;
+            background-color: rgb(255, 51, 0);
+            border: 1px dotted rgb(55, 0, 255);
+            animation: anim 1.5s infinite, back 1.5s infinite alternate;            
+        }
+        @keyframes shape {
+            from {
+                border: 1px solid deepskyblue;
+            }
+            to {
+                border: 5px solid rgb(235, 84, 8);
+                border-radius: 50%;
+                background-color: #00fd2d;
+            }
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            40% {
+                transform: rotate(270deg);
+                background-color: #f00df1;                
+            }
+            100% {
+                transform: rotate(-180deg);
+                background-color: #1f01ca;                
+            }
+        }
+        @keyframes anim {
+            0% {
+                transform: rotate(0deg);
+            }
+            40% {
+                transform: rotate(140deg);
+                transform: scale(6);
+                background-color: #00ccff;                
+            }
+            100% {
+                transform: rotate(-320deg);
+                background-color: #430101;                
+                transform: scale(2);
+            }
+        }
+        @keyframes back {
+            0% {
+                transform: rotate(-320deg);
+            }
+            30% {
+                transform: rotate(100deg);                
+                background-color: #8000ff;                
+            }
+            60% {
+                transform: rotate(280deg);                
+                transform: scale(4)
+                background-color: #8000ff;                
+            }
+            70% {
+                transform: rotate(-180deg);                
+                
+                background-color: #8000ff;                
+            }
+            100% {                
+                transform: scale(6)
+                background-color: #df15df;             
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="box" id="box1"></div>
+        <div class="box" id="box2"></div>
+        <div class="box" id="box3"></div>
+    </div>
+</body>
+</html>

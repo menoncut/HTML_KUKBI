@@ -3,32 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>borderradius</title>
+    <title>선형 그라데이션</title>
     <style>
-        #im1 {
-            border: 1px solid black;
+        div {
+            width: 500px;
+            height: 300px;
+            border-radius: 10px;
         }
-
-        #im2 {
-            border: 1px solid black;
-            border-radius: 500px;
-        }
-
-        #im3 {
-            border: 1px solid black;
-            border-top-right-radius: 500px;
-        }
-
-        #im4 {
-            border: 1px solid black;
-            border-bottom-right-radius: 100px;
+        .gradi {
+            background: linear-gradient(to right bottom, blue, white);
+            background: linear-gradient(45deg,#f00,#fff);
+            background: linear-gradient(to bottom,#06f,#fff 30%,rgb(12, 210, 221));
         }
     </style>
 </head>
 <body>
-    <img id="im1" src="고양이.webp">
-    <img id="im2" src="고양이.webp">
-    <img id="im3" src="고양이.webp">
-    <img id="im4" src="고양이.webp">
+
+    <div class="gradi"></div>
 </body>
 </html>

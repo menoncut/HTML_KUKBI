@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        header {
+            width: 100%;
+            height: 100px;
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        header h1 {
+            padding: 15px;            
+            text-align: center;           
+        }
+        nav {
+            width: 150px;
+            height: 750px;
+            background-color: chartreuse;
+        }
+        main {
+            display: flex;
+            width: calc(100%-150px);
+            height: 750px;
+            background-color: bisque;
+        }
+        nav {
+            padding: 10px;
+            padding-left: 30px;
+        }
+        nav ul {
+            list-style-type: none;
+        }
+        nav ul li {
+            line-height: 35px;
+            font-weight: bold;
+            font-size: 20px;
+            color: dodgerblue;
+        }
+        footer {
+            height: 100px;
+            background-color: #ccc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section {
+            width: calc(100%-150px);
+            margin: 20px auto;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        section #if {
+            width: 700px;            
+            height: 500px;
+            text-align: center;
+        }
+        @media screen and(min-width: 800px) and(max-width: 1000px) {
+            main #if {
+                border: 5px solid aqua;
+            }
+        }
+        @media screen and(max-width: 799px) {
+            footer {
+                background-color: purple;
+            }
+        }
+        @media screen and(max-width: 799px) {
+            header h1 {
+                display: none; /*글씨 숨김*/
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <head>
+                <h1>아름다운 펜션</h1>
+            </head>
+        </header>
+        <main>
+            <nav>
+                <ul>
+                    <li>예약하기</li>
+                    <li>펜션소개</li>
+                    <li>오시는길</li>
+                    <li>부대시설</li>
+                </ul>
+            </nav>
+            <section>
+                <content>
+                    <iframe id="if" src="펜션.jpg" frameborder="0"></iframe>
+                </content>
+            </section>
+        </main>
+        <footer>
+            <p>copyright 아름다운 펜션</p>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>예약하기_test05와 연결</title>
+        <style>
+        #signup input:checked + label {
+                
+                color: red;
+                font-weight: bold;
+        }    
+        ul {
+            list-style-type: none;
+            
+        }
+        ul li {
+            display: inline;
+        }
+        a {
+            text-decoration: none;
+            padding: 80px;
+        }
+        .navi a:link, .navi a:visited {
+            display: inline-block;
+            font-size: 14px;
+            color: rgb(255, 0, 0);
+            padding: 10px;
+            text-align: center;
+        }
+        .navi a:hover, .navi a:focus {
+            background-color: #222;
+            color: #fff;
+        }
+        .navi a:active {
+            background-color: #f00;
+        }   
+        .container2 {
+            width: 450px;
+            height: 500px;
+            border: 5px solid #ccc;
+            margin: 20px auto;
+        }
+        fieldset {
+            width: 300px;
+            margin: 20px auto;
+            line-height: 40px;
+        }
+        span {
+            color: red;
+            font-weight: bold;
+        }
+        #rev {
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #222;
+            border-radius: 20px;
+            font: 16px 맑은고딕,굴림,돋움;
+            letter-spacing: 1px;
+        }
+        #signup input:not([type=radio]):hover {
+            border-color: #f00;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="navi">
+            <ul>
+                <li><a href="test05.html#intro" target="_blank">이용 안내</a></li>
+                <li><a href="test05.html#room">객실 소개</a></li>
+                <li><a href="test05.html#service">예약 방법 및 요금</a></li>
+                <li><a href="예약하기.html" target="_blank">예약하기</a></li>
+            </ul>
+            <hr>
+        </nav>
+    </div>
+    <form id="signup" action="">
+        <div class="container2">
+        <fieldset>
+            <legend>개인 정보</legend>
+            <label for="">이&nbsp;&nbsp;름<input type="text"></label><br>
+            <label for="">연락처<input type="text"></label>
+        </fieldset>
+        <fieldset>
+            <legend>객실 형태</legend>
+            <input type="radio">
+            <label for="ab">기본형<span>(최대 2인)</span></label><br>
+            <input type="radio">
+            <label for="ab">가족형<span>(최대 8인)</span></label>
+        </fieldset>
+        <input id="rev" type="submit" value="예약하기">
+        </div>
+    </form>
+</body>
+</html>
