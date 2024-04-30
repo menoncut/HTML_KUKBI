@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼태그 예제</title>
+</head>
+<body>
+    <h1>폼태그 예제들</h1>
+    <form>
+        <fieldset style="width: 400px;">
+            <legend><b>상품정보</b></legend>
+            <label id="사번">사번 : 20240108</label><br>
+            <label>아&nbsp;이&nbsp;디&nbsp; : &nbsp;<input type="text" size="10" id="아이디" autofocus></label><br>          
+            <label>비밀번호 : &nbsp;<input type="text" id="비번" size="10"></label><br>
+            <input type="button" value="출력" onclick="vi()">
+            <input type="submit" value="로그인 합니다."><br>
+            <input type="reset" value="초기화 합니다.">
+        </fieldset>
+        <fieldset style="width: 400px;">
+            <legend><b>배송정보</b></legend>
+            <ul>
+                <li><label>전화번호 : </label><input type="text" size="10"></li>
+                <li><label>이&nbsp;메&nbsp;일 : &nbsp;</label><input type="text" size="10"></li>
+                <li><label>날&nbsp;&nbsp;짜 : &nbsp;&nbsp;&nbsp;&nbsp;</label><input type="date" size="10"></li>
+            </ul>                        
+            <input type="reset" value="초기화 합니다.">
+        </fieldset>
+        <fieldset style="width: 400px;">
+            <legend>포장선택</legend>
+            <label><input type="checkbox" name="gift" value="yes">선물포장</label>
+            <label><input type="checkbox" name="gift" value="no">포장안함</label><br>
+        </fieldset>
+        <fieldset style="width: 400px;">
+            <legend>상품선택</legend>
+            <label><input type="checkbox" name="gift" value="yes">한우 선물세트</label>
+            <label><input type="checkbox" name="gift" value="no">한돈 선물세트</label><br>
+        </fieldset>
+        <fieldset style="width: 400px;">
+            <legend>선물세트</legend>
+            <label><input type="checkbox" value="s_1">선물용 1kg</label>
+            <label><input type="checkbox" value="s_3">선물용 3kg</label>
+            <label><input type="checkbox" value="s_5">선물용 5kg</label>
+            <label><input type="range" min="0" max="10">개(최대10개)</label><br>
+            <label>메모</label>
+            <textarea id = "memo" cols="40" rows="4"></textarea><br>
+            <label>선물세트 2</label>
+            <select>
+                <option value="s_3">선물용 3kg</option>
+                <option value="s_4">선물용 4kg</option>
+                <option value="s_5" selected>선물용 5kg</option>
+                <option value="s_6">선물용 6kg</option>
+            </select>
+        </fieldset>
+        <button type="submit">주문하기</button>
+        <button type="reset">주문취소</button>
+        <button type="button">주문출력</button>
+        
+        
+    </form>
+    <script>
+        function vi() {
+            //document.body.innerHTML = document.getElementById("아이디").value;
+            //document.body.innerHTML = document.getElementById("비번").value;
+            var name = document.getElementById("아이디").value;
+            var pass = document.getElementById("비번").value;
+            document.body.innerHTML = "아이디 : "+name+"<br>"+"비번 : "+pass
+        }
+    </script>
+</body>
+</html>

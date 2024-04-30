@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>연습문제 2</title>
+</head>
+<body>
+    <h1>수습 국원 지원 양식</h1>
+    <form>        
+            <table border="1">        
+                <tr>
+                    <td rowspan="3" style="text-align: center;"><b>개인정보</b></td>
+                    <td>이름</td>
+                    <td style="width: 200px"><input id="이름" type="text" size="10"></td>           
+                </tr>
+                <tr>
+                    <td>학과/학번</td>
+                    <td style="width: 200px"><input id="학번" type="text" size="10"></td>
+                </tr>
+                <tr>
+                    <td>연락처</td>
+                    <td style="width: 200px"><input id="연락처" type="text"></td>            
+                </tr>
+                <tr>
+                    <td><b>지원 분야</b></td>            
+                    <td colspan="2"><input id="지원" type="text"></td>            
+                </tr>
+            </table>
+            <input type="submit" value="가입하기">
+            <input type="reset" value="가입취소">
+            <input type="button" value="화면출력" onclick="vi()">
+            <!-- <button type="submit">가입하기</button> -->
+            <!-- <button type="reset">가입취소</button> -->
+            <!-- <button type="button" onclick="vi()">화면출력</button> -->
+            <!-- <iframe src="https://m.blog.naver.com/PostView.naver?blogId=graymarket&logNo=223269604869&isFromSearchAddView=true" width="600" frameborder="0" height="600"></iframe>     -->        
+    </form>
+    <script>
+        function vi() {
+            var name = document.getElementById("이름").value;
+            var stuNum = document.getElementById("학번").value;
+            var phone = document.getElementById("연락처").value;
+            var vol = document.getElementById("지원").value;
+
+            document.body.innerHTML = "이름 : "+name+"<br>"+"학번 : "+stuNum+"<br>"+"연락처 : "+phone+"<br>"+"지원분야 : "+vol
+        }
+    </script>
+</body>
+</html>

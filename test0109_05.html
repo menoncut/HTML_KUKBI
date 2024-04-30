@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <h1>프런트엔드 개발자 지원서</h1>
+        <p>HTML, CSS, Jvascript에 대한 기술적 이해와 경험이 있는 분을 찾습니다.</p>
+        <HR>
+        <h3>개인정보</h3>
+        <label>이름 <input type="text" id="user_name" placeholder="이름을 입력하세요"></label>
+        <label>연락처 <input type="text" id="user_phone" placeholder="010-0000-0000"></label>
+        <h3>지원분야</h3>
+        <input type="radio" name="field" value="웹 퍼블리싱">웹 퍼블리싱<br>
+        <input type="radio" name="field" value="애플리캐이션 개발">애플리캐이션 개발<br>
+        <input type="radio" name="field" value="개발 환경 개선">개발 환경 개선
+        <div id="result"></div>
+        <h3>지원동기</h3>
+        <textarea id="motive" cols="60" rows="5" placeholder="지원동기를 간략히 적어주세요."></textarea><br>
+        <input type="submit" value="접수하기">
+        <input type="reset" value="다시쓰기">
+        <input type="button" value="화면출력" onclick="prtvi()">
+    </form>
+    <script>
+        // function submit() {
+        //     var name = document.getElementById("user_name").value;
+        //     var phone = document.getElementById("user_phone").value;
+            
+        //     // var app = document.getElementById("web_app").value;
+        //     // var devenv = document.getElementById("develenvir").value;            
+            
+        //     document.body.innerHTML = "이름 : "+name+"<br>"+"연락처 : "+phone+"<br>"+"지원분야 : "+pub.value
+        // }
+
+        function prtvi() {  
+  const genderNodeList
+  = document.getElementsByName('field');
+
+        var name = document.getElementById("user_name").value;
+        var contact = document.getElementById("user_phone").value;
+        var motive = document.getElementById("motive").value;
+
+  genderNodeList.forEach((node) => {
+    if(node.checked)  {   
+        var vol = document.getElementById('result').innerText = node.value;   
+      document.body.innerHTML = "이름 : "+name+"<br>"+"연락처 : "+contact+"<br>"+"지원 분야 : "+vol+"<br>"+"지원 동기 : "+motive       
+    }
+  }) 
+}
+
+        // function prtvi() {
+        //     var name = document.getElementById("user_name").value;
+        //     var contact = document.getElementById("user_phone").value;
+        //     var field = document.querySelector('input[name="field"]:checked').value;
+        //     var motive = document.getElementById("motive").value;
+
+        //     var output = "이름 : "+name+"<br>";
+        //     output += "연락처 : "+contact+"<br>";
+        //     output += "지원 분야 : "+field+"<br>";
+        //     output += "지원 동기 : "+motive+"<br>";
+
+        //     document.body.innerHTML = output;
+        // }
+    </script>
+</body>
+</html>

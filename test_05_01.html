@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시맨틱 태그 예제</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #66e015;
+            border-bottom: 1px solid #ddd;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            list-style-type: none;
+            display: inline;
+            padding: 0;
+            margin: 0;
+        }
+
+        main section {
+            margin-bottom: 200px;
+            border: 1px solid #ddd;
+            padding: 20px;
+        }
+        
+        footer {
+            height: 40px;
+            background-color: #c7c5c5;
+            text-align: center;
+        }
+        embed {
+            margin-left: 350px;
+        }
+        object {
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <header>        
+        <nav>
+            <a href="#">홈</a>
+            <a href="test_05_05.html"><img src="image/라면.jpg" alt="라면" width="15"></a>
+            <a href="image/SQL 개발자 스터디 교재.pdf">sql가이드</a>
+            <a href="#">문의</a>
+        </nav>
+    </header>
+            
+    <main>
+        <section>
+            <!-- <object width="400" height="400" data="image/SQL 개발자 스터디 교재.pdf"></object> -->
+            <embed src="image/cinematic-time-lapse-115672.mp3" width="200" height="60">
+            <h2>회사소개</h2>
+            <span>Start Your Brand</span> <br>
+            <span>브랜드의 시작과 성장을 위한 모든 것.</span><br>
+            <h2>서비스</h2>
+            <ol type="i">
+                <li>더많은 고객 인터뷰 확인</li>
+                <li>짧은 시간 웹사이트 구축</li>
+                <li>가장 강력한 브랜딩.</li>
+                <li>쉽고 저렴한데다 이쁘기까지 하니까요</li>
+            </ol>
+        </section>
+    </main>
+
+    <footer>
+        <p>Copyright ⓒ 2024 </p>
+    </footer>
+
+    
+</body>
+</html>
+
